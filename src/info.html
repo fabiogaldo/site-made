@@ -75,6 +75,7 @@
 			<div id="about" class="modal">
 				<div class="modal__content">
 					<h2>About Us</h2>
+					<a href="javascript:;" class="btn-close"><img src="/images/btn-close.png" alt=""></a>
 					<div class="modal__content__wrapper">
 						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis illo dicta enim placeat iusto praesentium
 							recusandae necessitatibus ratione! Dolorem molestias quas voluptate laborum aperiam a in, rem fugit
@@ -102,6 +103,11 @@
 						<p>Lorem Ipsum</p>
 					</div>
 				</div>
+				<div class="section-content__cards__button-holder">
+					<a href="javascript:;" class="btn-scroll">
+						<img src="images/scroll-up.png" alt="scroll up" data-target="#info" class="scroll-to">
+					</a>
+				</div>
 			</div>
 
 		</section>
@@ -120,8 +126,7 @@
 
 </body>
 <script>
-	($(function () {
-
+	($(() => {
 		const items = $('#main nav ul li');
 		const footerLeft = $('footer .left');
 		const footerRight = $('footer .right');
@@ -136,6 +141,12 @@
 		});
 
 		$('.modal__background').click((e) => {
+			$('#about').removeClass('opened', () => {
+				$('body').removeClass('modal-opened');
+			})
+		});
+
+		$('.btn-close').click((e) => {
 			$('#about').removeClass('opened', () => {
 				$('body').removeClass('modal-opened');
 			})

@@ -271,14 +271,15 @@ section {
         display: block;
         width: 100%;
         height: 7px;
-        background-size: cover;
 
         &.left {
           background: url('../images/bar-left.png') 0 0 no-repeat;
+          background-size: cover;
         }
 
         &.right {
           background: url('../images/bar-right.png') 0 0 no-repeat;
+          background-size: cover;
         }
       }
 
@@ -405,7 +406,7 @@ input[type='range']:focus {
 
 input[type='range']::-webkit-slider-runnable-track {
   width: 100%;
-  height: 8px;
+  height: 3px;
   cursor: pointer;
   background: url('../images/colorbar.png') 0 0 no-repeat;
   border-radius: 0;
@@ -414,13 +415,13 @@ input[type='range']::-webkit-slider-runnable-track {
 input[type='range']::-webkit-slider-thumb {
   box-shadow: none;
   border: 0 solid #000;
-  height: 30px;
-  width: 30px;
+  height: 15px;
+  width: 15px;
   border-radius: 50%;
   background: #fff;
   cursor: grabbing;
   -webkit-appearance: none;
-  margin-top: -10px;
+  margin-top: -6px;
 }
 
 input[type='range']:focus::-webkit-slider-runnable-track {
@@ -467,6 +468,14 @@ input[type='range']:focus::-webkit-slider-runnable-track {
       font-family: 'grotzec_headlinebold_cnd', sans-serif;
       text-transform: uppercase;
       font-size: rem(29.62px);
+      margin-bottom: rem(20px);
+    }
+
+    .btn-close {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
     }
 
     &__wrapper {
